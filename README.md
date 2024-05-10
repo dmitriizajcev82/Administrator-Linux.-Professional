@@ -9,3 +9,5 @@ Lesson_1
 </details> -->
 
 ## VAGRANT [Lesson_2](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson2)
+
+## Автоматизация администрирования. Ansible-1 [Lesson_3](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson3)
