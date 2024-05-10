@@ -6,19 +6,19 @@
 
 [![Screenshot-from-2024-05-07-21-24-26.jpg](https://i.postimg.cc/xqDTwZxp/Screenshot-from-2024-05-07-21-24-26.jpg)](https://postimg.cc/N2DcTdwR)
 
-1. загрузить версию ядра с сайта https://kernel.org/
+2. загрузить версию ядра с сайта https://kernel.org/
 
 ```shell
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.4.275.tar.xz
 ```
 
-1. распакуем архив
+3. распакуем архив
 
 ```shell
 tar xvz linux-5.4.275.tar.xz
 ```
 
-1. установим дополнительные пакеты
+4. установим дополнительные пакеты
 
 ```shell
 sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison
