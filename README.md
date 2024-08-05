@@ -13,3 +13,4 @@ Lesson_1
 ## Автоматизация администрирования. Ansible-1 [Lesson_3](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson3)
 
 ## Дисковая подсистема. [Lesson4](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson4)
+## Файловые системы и LVM - 1 [Lesson_6_7](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson_6_7)
