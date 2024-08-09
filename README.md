@@ -16,3 +16,4 @@ Lesson_1
 ## Файловые системы и LVM - 1 [Lesson_6_7](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson_6_7)
 ## ZFS [Lesson8](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson8)
 ## NFS, FUSE [Lesson9](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson9)
+## Загрузка системы [Lesson11](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson11)
