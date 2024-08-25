@@ -19,3 +19,4 @@ Lesson_1
 ## Управление пакетами. Дистрибьюция софта [Lesson10](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson10)
 ## Загрузка системы [Lesson11](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson11)
 ## Инициализация системы. Systemd [Lesson12](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson12)
+## BASh [Lesson13] (https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson13)
