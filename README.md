@@ -20,3 +20,4 @@ Lesson_1
 ## Загрузка системы [Lesson11](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson11)
 ## Инициализация системы. Systemd [Lesson12](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson12)
 ## BASH [Lesson13](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson13)
+## Управление процессами [Lesson15](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson15) 
