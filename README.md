@@ -21,3 +21,4 @@ Lesson_1
 ## Инициализация системы. Systemd [Lesson12](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson12)
 ## BASH [Lesson13](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson13)
 ## Управление процессами [Lesson15](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson15) 
+## SELinux - когда все запрещено [Lesson18](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson18)
