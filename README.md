@@ -23,3 +23,4 @@ Lesson_1
 ## Управление процессами [Lesson15](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson15) 
 ## SELinux - когда все запрещено [Lesson18](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson18)
 ## Docker: основы работы с контейнеризацией [Lesson19](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson19)
+## Основы сбора и хранения логов [Lesson24](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson24)
