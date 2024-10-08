@@ -12,7 +12,7 @@ Zabbix — система для мониторинга различных се�
 
 ## Установка Zabbix
 
-Установка и настройка приложения с оффициаольного сайта [ZABBIX](https://www.zabbix.com/download?zabbix=6.0&os_distribution=ubuntu&os_version=22.04&components=server_frontend_agent&db=mysql&ws=nginx)
+Установка и настройка приложения с оффициального сайта [ZABBIX](https://www.zabbix.com/download?zabbix=6.0&os_distribution=ubuntu&os_version=22.04&components=server_frontend_agent&db=mysql&ws=nginx)
 
 Проверим настройку всех требуемых приложений для корректной работы Zabbix.
 
