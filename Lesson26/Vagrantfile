@@ -1,0 +1,23 @@
+Vagrant.configure(2) do |config|
+
+file_to_disk = './sata1.vdi'
+
+#first host
+  config.vm.define "server" do |subconfig|
+    subconfig.vm.box = "bento/ubuntu-22.04"
+    subconfig.vm.hostname = "server"
+    subconfig.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.0.100"
+    subconfig.vm.disk :disk, size: "2GB", name: "disk1"
+    subconfig.vm.provision "shell", path: "server.sh"
+  end
+
+
+#second host
+  config.vm.define "client" do |subconfig|
+    subconfig.vm.box = "bento/ubuntu-22.04"
+    subconfig.vm.hostname = "client"
+    subconfig.vm.network "public_network", bridge: "wlp2s0", ip: "192.168.0.101"
+    subconfig.vm.provision "shell", path: "client.sh"
+  end
+
+end
