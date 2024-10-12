@@ -8,8 +8,8 @@ mkdir ~borg/.ssh
 touch ~borg/.ssh/authorized_keys
 chown -R borg:borg ~borg/.ssh
 mkdir /var/backup
-yes | mkfs -t ext4 /dev/sda
-mount /dev/sda /var/backup/
+mkfs -t ext4 /dev/sdb /var/backup
+mount /dev/sdb /var/backup/
 
 
 chown borg:borg /var/backup
