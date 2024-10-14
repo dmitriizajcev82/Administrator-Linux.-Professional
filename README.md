@@ -27,3 +27,4 @@ Lesson_1
 ## Основы сбора и хранения логов [Lesson24](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson24)
 ## Пользователи и группы. Авторизация и аутентификация [Lesson25](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson25)
 ## Резервное копирование [Lesson26](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson26)
+## Архитектура сетей [Lesson28](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson28)
