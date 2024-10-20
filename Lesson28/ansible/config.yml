@@ -1,0 +1,96 @@
+---
+################ inetRouter ################
+- name: Configure inetRouter
+  hosts: inetRouter
+  become: true
+
+  tasks:
+  - name: Install packages
+    apt: name={{ item }} state=latest update_cache=true
+    loop: [iptables, iptables-persistent]
+    
+  - name: Copy config iptables
+    template:
+      src: templates/rules.v4
+      dest: /etc/iptables/rules.v4
+      owner: root
+      group: root
+      mode: 0644
+    
+  - name: Copy config interfaces
+    template:
+      src: templates/inetRouter
+      dest: /etc/network/interfaces
+      owner: root
+      group: root
+      mode: 0644 
+   
+  - name: Reboot
+    reboot:
+
+################ ALL ################
+- name: Configure ALL
+  hosts: all
+  become: true
+
+  tasks:
+    
+  - name: Copy config interfaces centralRouter
+    template:
+      src: templates/centralRouter
+      dest: /etc/network/interfaces
+      owner: root
+      group: root
+      mode: 0644 
+    when: "'centralRouter' in ansible_hostname"
+      
+  - name: Copy config interfaces centralServer
+    template:
+      src: templates/centralServer
+      dest: /etc/network/interfaces
+      owner: root
+      group: root
+      mode: 0644 
+    when: "'centralServer' in ansible_hostname"
+ 
+  - name: Copy config interfaces office1Router
+    template:
+      src: templates/office1Router
+      dest: /etc/network/interfaces
+      owner: root
+      group: root
+      mode: 0644 
+    when: "'office1Router' in ansible_hostname"
+    
+  - name: Copy config interfaces office1Server
+    template:
+      src: templates/office1Server
+      dest: /etc/network/interfaces
+      owner: root
+      group: root
+      mode: 0644 
+    when: "'office1Server' in ansible_hostname"
+     
+  - name: Copy config interfaces
+    template:
+      src: templates/office2Router
+      dest: /etc/network/interfaces
+      owner: root
+      group: root
+      mode: 0644 
+    when: "'office2Router' in ansible_hostname"
+    
+  - name: Copy config interfaces office2Server
+    template:
+      src: templates/office2Server
+      dest: /etc/network/interfaces
+      owner: root
+      group: root
+      mode: 0644 
+    when: "'office2Server' in ansible_hostname"
+    
+  - name: Restart networks
+    service:
+      name: networking
+      state: restarted
+

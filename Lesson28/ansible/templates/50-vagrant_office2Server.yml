@@ -1,0 +1,18 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+      address 10.0.2.15/24
+      pre-up sleep 2
+	  
+auto eth1
+iface eth1 inet static
+      address 192.168.1.2/25
+      gateway 192.168.1.1
+	  dns-nameserver 77.88.8.8
+      dns-nameserver 8.8.8.8
+	  	  
+auto eth2
+iface eth2 inet static
+      address 192.168.50.31/24

@@ -1,0 +1,18 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+      dns-nameserver 77.88.8.8
+      dns-nameserver 8.8.8.8
+	  pre-up sleep 2
+
+auto eth1
+iface eth1 inet static
+      address 192.168.255.1/30
+      post-up ip route add 192.168.0.0/16 via 192.168.255.2
+	  post-up echo 1 > /proc/sys/net/ipv4/ip_forward
+
+auto eth2
+iface eth2 inet static
+      address 192.168.50.10/24
