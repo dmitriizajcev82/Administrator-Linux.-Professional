@@ -28,3 +28,4 @@ Lesson_1
 ## Пользователи и группы. Авторизация и аутентификация [Lesson25](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson25)
 ## Резервное копирование [Lesson26](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson26)
 ## Архитектура сетей [Lesson28](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson28)
+## DHCP, PXE  [Lesson29](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson29)
