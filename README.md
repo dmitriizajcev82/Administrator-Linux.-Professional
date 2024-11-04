@@ -30,3 +30,4 @@ Lesson_1
 ## Архитектура сетей [Lesson28](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson28)
 ## DHCP, PXE  [Lesson29](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson29)
 ## Фильтрация трафика - iptables [Lesson30](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson30)
+## Статическая и динамическая маршрутизация, OSPF [Lesson33](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson33)
