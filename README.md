@@ -31,3 +31,4 @@ Lesson_1
 ## DHCP, PXE  [Lesson29](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson29)
 ## Фильтрация трафика - iptables [Lesson30](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson30)
 ## Статическая и динамическая маршрутизация, OSPF [Lesson33](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson33)
+## Мосты, туннели и VPN [Lesson35](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson35)
