@@ -32,3 +32,4 @@ Lesson_1
 ## Фильтрация трафика - iptables [Lesson30](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson30)
 ## Статическая и динамическая маршрутизация, OSPF [Lesson33](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson33)
 ## Мосты, туннели и VPN [Lesson35](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson35)
+## DNS - настройка и обслуживание [Lesson36](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson36)
