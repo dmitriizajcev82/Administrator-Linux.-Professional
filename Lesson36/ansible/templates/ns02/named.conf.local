@@ -1,0 +1,39 @@
+include "/etc/bind/zonetransfer.key";
+
+acl cl01 { !key cl02-key; key cl01-key; 192.168.50.15; };
+acl cl02 { !key cl01-key; key cl02-key; 192.168.50.16; };
+
+view "client01" {
+    match-clients { cl01; };
+    zone "dns.lab" {
+        type secondary;
+        masters  { 192.168.50.15 key cl01-key; };
+    };
+
+    // newdns.lab zone
+    zone "newdns.lab" {
+        type secondary;
+        masters  { 192.168.50.15 key cl01-key; };        
+    };
+};
+
+view "client02" {
+    match-clients { cl02; };
+    zone "dns.lab" {
+        type secondary;
+        masters  { 192.168.50.16 key cl02-key; };
+    };
+};
+
+view "default" {
+    match-clients { any; };
+    zone "dns.lab" {
+        type secondary;
+        masters { 192.168.50.16 key zonetransfer.key; };
+    };
+
+    zone "newdns.lab" {
+        type secondary;
+        masters { 192.168.50.16 key zonetransfer.key; };
+    };
+};

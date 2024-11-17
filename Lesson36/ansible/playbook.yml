@@ -1,0 +1,167 @@
+---
+- name: Configure all
+  hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+  - name: Install packages
+    apt: name={{ item }} state=latest update_cache=true
+    loop: [bind9, bind9-utils] 
+    
+  - name: Execute shell commands
+    shell: |
+      timedatectl set-timezone Asia/Yekaterinburg
+      localectl set-locale LANG=ru_RU.UTF-8
+      systemctl stop vboxadd-service.service
+ 
+
+- name: Configure ns01
+  hosts: ns01
+  become: true
+  gather_facts: true
+  
+  tasks:
+  - name: Copy resolv.conf to ns01
+    template:
+      src: 'templates/resolv.conf.j2'
+      dest: '/etc/resolv.conf'
+      owner: root
+      group: root
+      mode: 0644
+  
+  - name: Copy files to server
+    copy:
+      src: '{{item}}'
+      dest: '/etc/bind/'
+      owner: root
+      group: root
+      mode: 0644
+    loop:
+      - templates/ns01/zonetransfer.key
+      - templates/ns01/db.dns.lab
+      - templates/ns01/db.dns.lab.cl01
+      - templates/ns01/db.dns.lab.cl02
+      - templates/ns01/db.newdns.lab
+      - templates/ns01/db.dns.lab.cl01
+      - templates/ns01/named.conf
+      - templates/ns01/named.conf.local
+    
+  - name: Restart BIND
+    service: 
+      name: bind9
+      state: restarted
+      enabled: true
+    
+
+- name: Configure ns02
+  hosts: ns02
+  become: true
+  gather_facts: true
+  tasks:
+  
+  - name: Copy resolv.conf to ns02
+    template:
+      src: 'templates/resolv.conf.j2'
+      dest: '/etc/resolv.conf'
+      owner: root
+      group: root
+      mode: 0644
+  
+  - name: Copy files to server
+    copy:
+      src: '{{item}}'
+      dest: '/etc/bind/'
+      owner: root
+      group: root
+      mode: 0644
+    loop:
+      - templates/ns02/zonetransfer.key
+      - templates/ns02/named.conf.local
+      - templates/ns02/named.conf
+    
+  - name: Restart BIND
+    service: 
+      name: bind9
+      state: restarted
+      enabled: true  
+
+
+- name: Configure clients
+  hosts: client
+  become: true
+  gather_facts: true  
+  tasks:
+  
+  - name: Copy resolv.conf to clients
+    copy:
+      src: 'templates/resolv.conf'
+      dest: '/etc/resolv.conf'
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: Tests client01
+    block:
+    - name: Run tests client01
+      shell: |
+        echo '#####################'
+        echo '### Test client01 ###'
+        echo '#####################'
+        echo ''
+        echo '### Test with NS01 ###'
+        echo 'lookup www.newdns.lab'
+        dig www.newdns.lab +short @192.168.50.15
+        echo 'lookup web1.dns.lab'
+        dig web1.dns.lab +short @192.168.50.15
+        echo 'lookup web2.dns.lab'
+        dig web2.dns.lab +short @192.168.50.15
+        echo ''
+        echo '### Test with NS02 ###'
+        echo 'lookup www.newdns.lab'
+        dig www.newdns.lab +short @192.168.50.16
+        echo 'lookup web1.dns.lab'
+        dig web1.dns.lab +short @192.168.50.16
+        echo 'lookup web2.dns.lab'
+        dig web2.dns.lab +short @192.168.50.16
+      register: command_output
+
+    - name: Print tests results
+      debug:
+        var: command_output.stdout_lines
+
+    when: 
+    - ansible_hostname == "client01"
+
+  - name: Tests client02
+    block:
+    - name: Run tests client02
+      shell: |
+        echo '#####################'
+        echo '### Test client02 ###'
+        echo '#####################'
+        echo ''
+        echo '### Test with NS01 ###'
+        echo 'lookup www.newdns.lab'
+        dig www.newdns.lab +short @192.168.50.15
+        echo 'lookup web1.dns.lab'
+        dig web1.dns.lab +short @192.168.50.15
+        echo 'lookup web2.dns.lab'
+        dig web2.dns.lab +short @192.168.50.15
+        echo ''
+        echo '### Test with NS02 ###'
+        echo 'lookup www.newdns.lab'
+        dig www.newdns.lab +short @192.168.50.16
+        echo 'lookup web1.dns.lab'
+        dig web1.dns.lab +short @192.168.50.16
+        echo 'lookup web2.dns.lab'
+        dig web2.dns.lab +short @192.168.50.16
+      register: command_output
+
+    - name: Print tests results
+      debug:
+        var: command_output.stdout_lines
+
+    when: 
+    - ansible_hostname == "client02"  
+  
