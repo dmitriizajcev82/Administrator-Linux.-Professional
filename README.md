@@ -34,3 +34,4 @@ Lesson_1
 ## Мосты, туннели и VPN [Lesson35](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson35)
 ## DNS - настройка и обслуживание [Lesson36](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson36)
 ## Сетевые пакеты. VLAN'ы. LACP [Lesson37](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson37)
+## LDAP. Централизованная авторизация и аутентификация [Lesson38](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson38)
