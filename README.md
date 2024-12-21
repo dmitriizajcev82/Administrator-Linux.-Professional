@@ -37,3 +37,4 @@ Lesson_1
 ## LDAP. Централизованная авторизация и аутентификация [Lesson38](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson38)
 ## Динамический веб [Lesson42](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson42)
 ## MySQL: Backup + Репликация [Lesson44](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson44)
+## Postgres: Backup + Репликация [Lesson46](https://github.com/dmitriizajcev82/Administrator-Linux.-Professional/tree/main/Lesson46)
